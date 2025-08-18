@@ -1,0 +1,1 @@
+# qubership-app-manifest-cli
