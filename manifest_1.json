@@ -1,13 +1,13 @@
 {
-  "serialNumber": "urn:uuid:b491de00-9b82-4a88-be6f-15f265a62c10",
+  "serialNumber": "urn:uuid:691d198d-3bcb-4882-a7e5-b2a7732e58fb",
   "$schema": "../schemas/application-manifest.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-08-29T12:18:28Z",
+    "timestamp": "2025-08-29T14:14:37Z",
     "component": {
-      "bom-ref": "test-application:b4f98f73-6ed7-4d9e-9b6d-02f3713e9624",
+      "bom-ref": "test-application:0bd6127f-c73b-44b3-9b62-7996f0d17220",
       "type": "application",
       "mime-type": "application/vnd.qubership.application",
       "name": "test-application",
@@ -29,7 +29,7 @@
       "mime-type": "application/vnd.docker.image",
       "version": "1.0.0",
       "purl": "ghcr.io/nookyo/qubership-logging-ui:1.0.0",
-      "bom-ref": "qubership-logging-ui:3ab87a03-c762-4d08-8835-e0838366f0e5"
+      "bom-ref": "qubership-logging-ui:d2078150-5291-487d-bf43-6cffe42d05ad"
     },
     {
       "name": "qubership-logging-integration-tests",
@@ -71,18 +71,18 @@
       "dependsOn": [
         "ghcr.io/nookyo/qubership-logging-integration-tests:9a07ab2d-3184-4722-87e0-07ddf3def7a0",
         "patroni-services:d099b0df-b8e3-4d02-8f9e-8cc342de2139",
-        "qubership-logging-ui:3ab87a03-c762-4d08-8835-e0838366f0e5"
+        "qubership-logging-ui:d2078150-5291-487d-bf43-6cffe42d05ad"
       ]
     },
     {
       "ref": "patroni-services:d099b0df-b8e3-4d02-8f9e-8cc342de2139",
       "dependsOn": [
         "ghcr.io/nookyo/qubership-logging-integration-tests:9a07ab2d-3184-4722-87e0-07ddf3def7a0",
-        "qubership-logging-ui:3ab87a03-c762-4d08-8835-e0838366f0e5"
+        "qubership-logging-ui:d2078150-5291-487d-bf43-6cffe42d05ad"
       ]
     },
     {
-      "ref": "qubership-logging-ui:3ab87a03-c762-4d08-8835-e0838366f0e5",
+      "ref": "qubership-logging-ui:d2078150-5291-487d-bf43-6cffe42d05ad",
       "dependsOn": [
         "ghcr.io/nookyo/qubership-logging-integration-tests:9a07ab2d-3184-4722-87e0-07ddf3def7a0"
       ]
