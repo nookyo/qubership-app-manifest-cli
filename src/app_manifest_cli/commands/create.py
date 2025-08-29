@@ -60,3 +60,4 @@ def create_command(
         "dependencies": [],
     }
     out.write(json.dumps(body, ensure_ascii=False, indent=2))
+    return body
