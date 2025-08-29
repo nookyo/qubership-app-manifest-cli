@@ -1,5 +1,5 @@
 import json
-from ..handlers.registry import handler
+from ..handlers.registry import get_handler
 
 def add_component(manifest_path: str, payload_text: str, out_file):
 
@@ -7,7 +7,7 @@ def add_component(manifest_path: str, payload_text: str, out_file):
 
     obj = json.loads(payload_text)
     mime = obj.get("mime-type") or obj.get("mime_type")
-    handler = handler(mime)
+    handler = get_handler(mime)
     item = handler(obj)
 
     with open(manifest_path, "r", encoding="utf-8") as f:

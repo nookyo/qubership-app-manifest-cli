@@ -7,5 +7,5 @@ _HANDLERS = {
     "application/vnd.qubership.helm.chart": helm_handle,
 }
 
-def handler(mime: str | None):
+def get_handler(mime: str | None):
     return _HANDLERS.get(mime, default_handle)

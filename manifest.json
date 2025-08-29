@@ -1,13 +1,13 @@
 {
-  "serialNumber": "urn:uuid:6d2b762f-8837-4e4c-8495-da6b663a6b43",
+  "serialNumber": "urn:uuid:a277394d-5d9b-401d-987d-a4d041ae29c6",
   "$schema": "../schemas/application-manifest.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-08-28T13:25:14Z",
+    "timestamp": "2025-08-29T07:14:02Z",
     "component": {
-      "bom-ref": "my-service:0bc9e0d1-775a-440f-a5eb-270475afbcc7",
+      "bom-ref": "my-service:3f0724ae-1ca9-4217-8be4-b7f04695abca",
       "type": "application",
       "mime-type": "application/vnd.qubership.application",
       "name": "my-service",
@@ -25,16 +25,6 @@
   },
   "components": [
     {
-      "strategy": "helm",
-      "data": {
-        "bom-ref": "qubership-integration-platform-variables-management:9010ea35-42e7-4a6f-93e4-2d63e7f9abf3",
-        "type": "application",
-        "mime-type": "application/vnd.qubership.helm.chart",
-        "name": "qubership-integration-platform-variables-management",
-        "properties": []
-      }
-    },
-    {
       "strategy": "docker",
       "data": {
         "bom-ref": "ghcr.io/nookyo/qubership-logging-integration-tests:9a07ab2d-3184-4722-87e0-07ddf3def7a0",
@@ -60,26 +50,37 @@
         "mime-type": "application/vnd.qubership.helm.chart",
         "name": "qubership-integration-platform-variables-management",
         "properties": []
-      }
-    },
-    {
-      "strategy": "docker",
-      "data": {
-        "bom-ref": "ghcr.io/nookyo/qubership-logging-integration-tests:9a07ab2d-3184-4722-87e0-07ddf3def7a0",
-        "type": "container",
-        "mime-type": "application/vnd.docker.image",
-        "name": "ghcr.io/nookyo/qubership-logging-integration-tests",
-        "group": "default",
-        "version": "main",
-        "hashes": [
-          {
-            "alg": "sha256",
-            "content": "7d429a4d37e26f3be114315f0af643c2c768964ecb6f3f0b2c53f2c9e1bb4775"
-          }
-        ],
-        "purl": "pkg:docker/core/ghcr.io/nookyo/qubership-logging-integration-tests@main?registryName=sandbox"
       }
     }
   ],
-  "dependencies": []
+  "dependencies": [
+    {
+      "ref": "my-service:123e4567-e89b-12d3-a456-426614174000",
+      "dependsOn": [
+        "other-service:987e6543-e21b-12d3-a456-426614174111",
+        "db-service:55555555-aaaa-bbbb-cccc-121212121212"
+      ]
+    },
+    {
+      "ref": "my-service:123e4567-e89b-12d3-a456-426614174000",
+      "dependsOn": [
+        "other-service:987e6543-e21b-12d3-a456-426614174111",
+        "db-service:55555555-aaaa-bbbb-cccc-121212121212"
+      ]
+    },
+    {
+      "ref": "my-service:123e4567-e89b-12d3-a456-426614174000",
+      "dependsOn": [
+        "other-service:987e6543-e21b-12d3-a456-426614174111",
+        "db-service:55555555-aaaa-bbbb-cccc-121212121212"
+      ]
+    },
+    {
+      "ref": "my-service:123e4567-e89b-12d3-a456-426614174000",
+      "dependsOn": [
+        "other-service:987e6543-e21b-12d3-a456-426614174111",
+        "db-service:55555555-aaaa-bbbb-cccc-121212121212"
+      ]
+    }
+  ]
 }
