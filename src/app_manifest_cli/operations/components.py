@@ -3,7 +3,7 @@ from ..handlers.registry import handler
 
 def add_component(manifest_path: str, payload_text: str, out_file):
 
-    # Тут можно добавить логику обработки Компонент
+   # Тут можно написать логику для Компонент
 
     obj = json.loads(payload_text)
     mime = obj.get("mime-type") or obj.get("mime_type")

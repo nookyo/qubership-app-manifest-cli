@@ -1,6 +1,6 @@
 from .default import handle as default_handle
-from .docker_image import handle as docker_handle
-from .helm_chart import handle as helm_handle
+from .docker_handler import handle as docker_handle
+from .helm_handler import handle as helm_handle
 
 _HANDLERS = {
     "application/vnd.docker.image": docker_handle,

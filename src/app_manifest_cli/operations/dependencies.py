@@ -3,7 +3,7 @@ import json
 
 def add_dependency(manifest_path: str, payload_text: str, configuration: str, out_file):
 
-    # Тут можно написать логику для  депенденси
+    # Тут можно написать логику для депенденси
 
     item = json.loads(payload_text)
     with open(manifest_path, "r", encoding="utf-8") as f:
