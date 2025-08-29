@@ -1,6 +1,6 @@
 import sys, typer, json
-from ..ops.components import add_component as _add_component
-from ..ops.dependencies import add_dependency as _add_dependency
+from ..services.components import add_component as _add_component
+from ..services.dependencies import add_dependency as _add_dependency
 
 def add_command(
     manifest: str = typer.Argument(...),
